@@ -7,5 +7,5 @@ import java.sql.Timestamp;
 @Data
 public class OrderClientQty {
     String client;
-    Integer quantity;
+    Integer quantity = 0;
 }

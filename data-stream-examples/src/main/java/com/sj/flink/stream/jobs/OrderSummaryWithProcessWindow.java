@@ -1,4 +1,4 @@
-package com.sj.flink.stream;
+package com.sj.flink.stream.jobs;
 
 import com.sj.flink.stream.operators.OrderItemFilter;
 import com.sj.flink.stream.operators.OrderItemFlatMap;
@@ -10,7 +10,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.windowing.assigners.SlidingProcessingTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 
-public class OrderSummaryJob {
+public class OrderSummaryWithProcessWindow {
 
     public static void main(String[] args) throws Exception {
 

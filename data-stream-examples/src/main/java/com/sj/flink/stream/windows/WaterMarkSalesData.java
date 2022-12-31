@@ -44,7 +44,6 @@ public class WaterMarkSalesData {
                 .keyBy(value -> value.f0)
                 .window(TumblingEventTimeWindows.of(Time.seconds(10)))
                 //.window(TumblingProcessingTimeWindows.of(Time.seconds(10)))
-                .trigger(new )
                 .reduce((a,b) -> new Tuple3<>(a.f0+":::", a.f1, a.f2 + b.f2));
                 //.sum(2);
         dataStream.print();

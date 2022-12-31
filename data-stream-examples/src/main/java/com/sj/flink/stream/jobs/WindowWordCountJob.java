@@ -1,4 +1,4 @@
-package com.sj.flink.stream;
+package com.sj.flink.stream.jobs;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.java.tuple.Tuple2;

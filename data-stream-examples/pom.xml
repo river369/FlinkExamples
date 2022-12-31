@@ -44,7 +44,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        com.sj.flink.stream.WindowWordCountJob
+                                        com.sj.flink.stream.jobs.WindowWordCountJob
                                     </mainClass>
                                 </manifest>
                             </archive>
@@ -110,7 +110,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.sj.flink.stream.OrderSummaryJob</mainClass>
+                                    <mainClass>com.sj.flink.stream.jobs.OrderSummaryWithProcessWindow</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

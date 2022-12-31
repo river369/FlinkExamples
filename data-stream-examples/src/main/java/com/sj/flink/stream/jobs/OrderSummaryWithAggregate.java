@@ -1,4 +1,4 @@
-package com.sj.flink.stream;
+package com.sj.flink.stream.jobs;
 
 import com.sj.flink.stream.operators.*;
 import com.sj.flink.stream.operators.OrderItemMap;
@@ -13,7 +13,14 @@ import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindo
 import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 
-public class OrderSkuSummaryJob {
+/**
+ * Get data as OrderItem, and aggregate it to OrderSkuQty.
+ * AggregateFunction can maintain a Accumulator state that developer created at the initialization stage
+ *
+ * Another way optional way is add another map to transform OrderItem to OrderSkuQty then reduce
+ *
+ */
+public class OrderSummaryWithAggregate {
 
     public static void main(String[] args) throws Exception {
 
@@ -22,7 +29,8 @@ public class OrderSkuSummaryJob {
         DataStream<OrderItem> orderItemDataStream = env.fromElements(
                 "B001 Jack 1671537515000 3",
                 "B002 Jack 1671537515000 2",
-                "B001 Tom 1671537518000 1", "B001 Tom1 1671537518000 1", "B001 Tom2 1671537518000 1", "B001 Tom3 1671537518000 1", "B001 Tom4 1671537518000 1",
+                "B001 Tom 1671537518000 1",
+                "B001 Tom1 1671537518000 1",
                 "B003 Jason 1671537519000 5",
                 "B002 Jason 1671537519000 7",
                 "B005 Jason 1671537519000 -1",
