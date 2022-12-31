@@ -9,7 +9,7 @@ import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTime
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.util.Collector;
 
-public class WindowWordCount {
+public class WindowWordCountJob {
 
     public static void main(String[] args) throws Exception {
 

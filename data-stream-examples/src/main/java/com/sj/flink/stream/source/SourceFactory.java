@@ -1,4 +1,4 @@
-package com.sj.flink.source;
+package com.sj.flink.stream.source;
 
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.connector.file.src.FileSource;

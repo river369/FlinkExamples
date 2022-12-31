@@ -1,4 +1,4 @@
-package com.sj.flink.stream.tool;
+package com.sj.flink.stream.tools;
 
 import java.io.FileOutputStream;
 import java.util.Random;
